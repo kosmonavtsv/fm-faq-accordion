@@ -124,6 +124,7 @@ main {
   margin: 0;
   text-align: start;
   font-family: inherit;
+  height: 1.88rem;
 }
 
 .card__item-summary:hover,
@@ -186,5 +187,9 @@ main {
 
   .card__item:where(:not(:last-child)) {
     padding-bottom: 1.5rem;
+  }
+
+  .card__item:where(:not(:first-child)) {
+    padding-top: 1.5rem;
   }
 }
