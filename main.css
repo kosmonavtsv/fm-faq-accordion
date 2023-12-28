@@ -66,15 +66,14 @@ img {
 body {
   margin: 0;
   padding: 0;
-  font-size: var(--fs-400); 
+  font-size: var(--fs-400);
   font-family: 'Work Sans', sans-serif;
   min-height: 100vh;
   background-color: var(--clr-light-pink);
   /*
-    https://discourse.webflow.com/t/svg-background-stretch/80917/14
     https://css-tricks.com/scale-svg/
   */
-  background-image: url("/assets/images/background-pattern-mobile.svg#svgView(preserveAspectRatio(none))");
+  background-image: url('/assets/images/background-pattern-mobile.svg#svgView(preserveAspectRatio(none))');
   background-repeat: no-repeat;
   background-size: 100% 28.57vh;
   background-position: auto top;
@@ -92,13 +91,13 @@ main {
   padding: 1.5rem;
   max-width: 37.5rem;
   border-radius: 1rem;
-  box-shadow: 0px 32px 56px 0px rgba(80, 0, 118, 0.10);
+  box-shadow: 0px 32px 56px 0px rgba(80, 0, 118, 0.1);
   margin-top: 18.61vh;
 }
 
 .card__title {
   display: flex;
-  gap:1.5rem;
+  gap: 1.5rem;
   justify-content: start;
   align-items: center;
 }
@@ -123,7 +122,7 @@ main {
   width: 100%;
   padding: 0;
   margin: 0;
-  text-align: start ;
+  text-align: start;
   font-family: inherit;
 }
 
@@ -140,13 +139,13 @@ main {
 .card__item-btn {
   flex: 0 0 auto;
   width: 1.875rem;
-  height:1.875rem;
+  height: 1.875rem;
   background: url(/assets/images/icon-plus.svg) no-repeat center / cover;
 }
 
 /* 
   Accordion - height "auto" with grid
-  https://codepen.io/kevinpowell/pen/NWOgVga?editors=0010 
+  https://codepen.io/kevinpowell/pen/NWOgVga?editors=0010
 */
 .card__item-content {
   line-height: 1.5;
@@ -159,18 +158,18 @@ main {
   overflow: hidden;
 }
 
-.card__item-summary[aria-expanded="true"] .card__item-btn {
+.card__item-summary[aria-expanded='true'] .card__item-btn {
   background: url(/assets/images/icon-minus.svg) no-repeat center / cover;
 }
 
-.card__item-content[aria-hidden="false"] {
+.card__item-content[aria-hidden='false'] {
   margin-top: 1.5rem;
   grid-template-rows: 1fr;
 }
 
 @media screen and (min-width: 376px) {
   body {
-    background-image: url("/assets/images/background-pattern-desktop.svg#svgView(preserveAspectRatio(none))");
+    background-image: url('/assets/images/background-pattern-desktop.svg#svgView(preserveAspectRatio(none))');
     background-size: 100% 35.55vh;
   }
 }

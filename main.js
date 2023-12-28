@@ -1,3 +1,5 @@
+// The “behavior” pattern
+// https://javascript.info/event-delegation#the-behavior-pattern
 document.addEventListener('click', function(event) {
   const id = event.target.dataset.expandId;
   if (!id) return;
