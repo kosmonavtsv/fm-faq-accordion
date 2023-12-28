@@ -1,0 +1,176 @@
+:root {
+  --clr-light-pink: hsla(274, 100%, 97%, 1);
+  --clr-pink: hsla(281, 83%, 54%, 1);
+  --clr-pale-purple: hsla(292, 16%, 49%, 1);
+  --clr-dark-purple: hsla(292, 42%, 14%, 1);
+  --clr-white: hsla(0, 0%, 100%, 1);
+  --fs-400: 0.875rem;
+  --fs-500: 1rem;
+  --fs-600: 2rem;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fw-400 {
+  font-weight: var(--fw-400);
+}
+.fw-600 {
+  font-weight: var(--fw-600);
+}
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+.bg-dark-purple {
+  background-color: var(--clr-dark-purple);
+}
+.bg-white {
+  background-color: var(--clr-white);
+}
+.clr-pale-purple {
+  color: var(--clr-pale-purple);
+}
+
+.flow > :where(:not(:first-child)) {
+  margin-top: var(--gap, 1.5rem);
+}
+
+.d-none {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: var(--fs-400); 
+  font-family: 'Work Sans', sans-serif;
+  min-height: 100vh;
+  background-color: var(--clr-light-pink);
+  /*
+    https://discourse.webflow.com/t/svg-background-stretch/80917/14
+    https://css-tricks.com/scale-svg/
+  */
+  background-image: url("/assets/images/background-pattern-mobile.svg#svgView(preserveAspectRatio(none))");
+  background-repeat: no-repeat;
+  background-size: 100% 28.57vh;
+  background-position: auto top;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100vh;
+  padding-inline: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+  max-width: 37.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 32px 56px 0px rgba(80, 0, 118, 0.10);
+  margin-top: 18.61vh;
+}
+
+.card__title {
+  display: flex;
+  gap:1.5rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.card__item:where(:not(:last-child)) {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px var(--clr-light-pink) solid;
+}
+
+.card__item:where(:not(:first-child)) {
+  padding-top: 1.25rem;
+}
+
+.card__item-summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: center;
+  list-style: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: start ;
+  font-family: inherit;
+}
+
+.card__item-summary:hover,
+.card__item-summary:focus {
+  color: var(--clr-pink);
+  outline: none;
+}
+
+.card__item-summary * {
+  pointer-events: none;
+}
+
+.card__item-btn {
+  flex: 0 0 auto;
+  width: 1.875rem;
+  height:1.875rem;
+  background: url(/assets/images/icon-plus.svg) no-repeat center / cover;
+}
+
+/* 
+  Accordion - height "auto" with grid
+  https://codepen.io/kevinpowell/pen/NWOgVga?editors=0010 
+*/
+.card__item-content {
+  line-height: 1.5;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease-out;
+}
+
+.card__item-content p {
+  overflow: hidden;
+}
+
+.card__item-summary[aria-expanded="true"] .card__item-btn {
+  background: url(/assets/images/icon-minus.svg) no-repeat center / cover;
+}
+
+.card__item-content[aria-hidden="false"] {
+  margin-top: 1.5rem;
+  grid-template-rows: 1fr;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    background-image: url("/assets/images/background-pattern-desktop.svg#svgView(preserveAspectRatio(none))");
+    background-size: 100% 35.55vh;
+  }
+}

@@ -1,48 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | FAQ accordion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  FAQs
+    <link rel="stylesheet" href="main.css" class="css" />
+    <title>Frontend Mentor | FAQ accordion</title>
+  </head>
+  <body>
+    <h1 class="d-none">we need h1 tag</h1>
+    <main>
+      <div class="card bg-white flow">
+        <div class="card__title fs-600 fw-700">
+          <img src="assets/images/icon-star.svg" alt="icon star" />
+          <span>FAQs</span>
+        </div>
+        <div class="card__content">
+          <div class="card__item">
+            <button
+              class="card__item-summary fs-500 fw-600"
+              data-expand-id="panel1"
+              id="panel1-title"
+              aria-controls="panel1"
+              aria-expanded="true"
+            >
+              <span>What is Frontend Mentor, and how will it help me?</span>
+              <div class="card__item-btn"></div>
+            </button>
+            <div
+              class="card__item-content clr-pale-purple"
+              role="region"
+              id="panel1"
+              aria-labelledby="panel1-title"
+              aria-hidden="false"
+            >
+              <p>
+                Frontend Mentor offers realistic coding challenges to help
+                developers improve their frontend coding skills with projects in
+                HTML, CSS, and JavaScript. It’s suitable for all levels and
+                ideal for portfolio building.
+              </p>
+            </div>
+          </div>
 
-  What is Frontend Mentor, and how will it help me?
+          <div class="card__item">
+            <button
+              class="card__item-summary fs-500 fw-600"
+              data-expand-id="panel2"
+              id="panel2-title"
+              aria-controls="panel2"
+              aria-expanded="false"
+            >
+              <span>Is Frontend Mentor free?</span>
+              <div class="card__item-btn"></div>
+            </button>
+            <div
+              class="card__item-content clr-pale-purple"
+              role="region"
+              id="panel2"
+              aria-labelledby="panel2-title"
+              aria-hidden="true"
+            >
+              <p>
+                Frontend Mentor offers realistic coding challenges to help
+                developers improve their frontend coding skills with projects in
+                HTML, CSS, and JavaScript. It’s suitable for all levels and
+                ideal for portfolio building.
+              </p>
+            </div>
+          </div>
 
-  Frontend Mentor offers realistic coding challenges to help developers improve their 
-  frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
-  all levels and ideal for portfolio building.
+          <div class="card__item">
+            <button
+              class="card__item-summary fs-500 fw-600"
+              data-expand-id="panel3"
+              id="panel3-title"
+              aria-controls="panel3"
+              aria-expanded="false"
+            >
+              <span>Can I use Frontend Mentor projects in my portfolio?</span>
+              <div class="card__item-btn"></div>
+            </button>
+            <div
+              class="card__item-content clr-pale-purple"
+              role="region"
+              id="panel3"
+              aria-labelledby="panel3-title"
+              aria-hidden="true"
+            >
+              <p>
+                Frontend Mentor offers realistic coding challenges to help
+                developers improve their frontend coding skills with projects in
+                HTML, CSS, and JavaScript. It’s suitable for all levels and
+                ideal for portfolio building.
+              </p>
+            </div>
+          </div>
 
-  Is Frontend Mentor free?
-
-  Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
-  option providing access to a range of projects suitable for all skill levels.
-
-  Can I use Frontend Mentor projects in my portfolio?
-
-  Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-  way to showcase your skills to potential employers!
-
-  How can I get help if I'm stuck on a Frontend Mentor challenge?
-  
-  The best place to get help is inside Frontend Mentor's Discord community. There's a help 
-  channel where you can ask questions and seek support from other community members.
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <div class="card__item">
+            <button
+              class="card__item-summary fs-500 fw-600"
+              data-expand-id="panel4"
+              id="panel4-title"
+              aria-controls="panel4"
+              aria-expanded="false"
+            >
+              <span>How can I get help if I'm stuck on a challenge?</span>
+              <div class="card__item-btn"></div>
+            </button>
+            <div
+              class="card__item-content clr-pale-purple"
+              role="region"
+              id="panel4"
+              aria-labelledby="panel4-title"
+              aria-hidden="true"
+            >
+              <p>
+                Frontend Mentor offers realistic coding challenges to help
+                developers improve their frontend coding skills with projects in
+                HTML, CSS, and JavaScript. It’s suitable for all levels and
+                ideal for portfolio building.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="main.js"></script>
 </html>
