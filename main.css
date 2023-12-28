@@ -171,7 +171,7 @@ main {
 @media screen and (min-width: 376px) {
   :root {
     --fs-400: 1rem;
-    --fs-500: 1.125;
+    --fs-500: 1.125rem;
     --fs-600: 3.5rem;
   }
 
