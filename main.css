@@ -181,7 +181,7 @@ main {
 
   body {
     background-image: url('assets/images/background-pattern-desktop.svg#svgView(preserveAspectRatio(none))');
-    background-size: 100% 35.55vh;
+    background-size: 100vw 35.55vh;
   }
 
   .card {
