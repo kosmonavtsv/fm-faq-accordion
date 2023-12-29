@@ -75,7 +75,7 @@ body {
   */
   background-image: url('assets/images/background-pattern-mobile.svg#svgView(preserveAspectRatio(none))');
   background-repeat: no-repeat;
-  background-size: 100% 28.57vh;
+  background-size: 100vw 28.57vh;
   background-position: auto top;
 }
 
@@ -84,6 +84,11 @@ main {
   justify-content: center;
   align-items: start;
   height: 100vh;
+  /* 
+    Preventing the Layout Shift Caused by Scrollbars
+    https://dev.to/rashidshamloo/preventing-the-layout-shift-caused-by-scrollbars-2flp
+  */
+  width: 100vw; 
   padding-inline: 1.5rem;
 }
 
