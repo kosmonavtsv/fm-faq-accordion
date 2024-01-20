@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://www.frontendmentor.io/solutions/faq-accordion-with-a-nice-animation-ptT0CZ-D0P
-- Live Site URL: https://kosmonavtsv.github.io/faq-accordion
+- Live Site URL: https://kosmonavtsv.github.io/fm-faq-accordion
 
 ## My process
 
